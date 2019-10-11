@@ -8,7 +8,7 @@ import SEO from "../components/seo"
 import "../utils/normalize.css"
 import "../utils/css/screen.css"
 
-const AboutPage = ({ data }, location) => {
+const ContactPage = ({ data }, location) => {
   const siteTitle = data.site.siteMetadata.title
 
   return (
@@ -16,7 +16,7 @@ const AboutPage = ({ data }, location) => {
       <SEO title="ABout" keywords={[`blog`, `gatsby`, `javascript`, `react`]} />
 
       <header className="page-head">
-        <h2 className="page-head-title">About Us Page</h2>
+        <h2 className="page-head-title">Contact Us Page</h2>
       </header>
 
       <div class="post-content-body">
@@ -54,7 +54,7 @@ export default props => (
   <StaticQuery
     query={indexQuery}
     render={data => (
-      <AboutPage location={props.location} data={data} {...props} />
+      <ContactPage location={props.location} data={data} {...props} />
     )}
   />
 )

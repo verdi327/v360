@@ -1,5 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
+import "../utils/css/components/layout.css"
 
 const Layout = props => {
   const { title, children } = props
@@ -24,52 +25,31 @@ const Layout = props => {
               </div>
             </div>
           </a>
-          <nav id="swup" class="site-head-left">
+          <nav id="swup" className="site-head-left">
             <ul className="nav" role="menu">
-              <li className="nav-home nav-current" role="menuitem">
-                <Link to={`/`}>Home</Link>
-              </li>
               <li className="nav-about" role="menuitem">
                 <Link to={`/about`}>About</Link>
               </li>
-              <li className="nav-elements" role="menuitem">
-                <Link to={`/elements`}>Elements</Link>
+              <li className="nav-team" role="menuitem">
+                <Link to={`/team`}>Team</Link>
               </li>
             </ul>
           </nav>
           <div className="site-head-center">
             <Link className="site-head-logo" to={`/`}>
-              {title}
+              Victory360
             </Link>
           </div>
-          <div className="site-head-right">
-            <div className="social-links">
-              <a
-                href="https://www.facebook.com"
-                title="Facebook"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Facebook
-              </a>
-              <a
-                href="https://twitter.com"
-                title="Twitter"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Twitter
-              </a>
-              <Link
-                to={`/rss.xml`}
-                title="RSS"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                RSS
-              </Link>
-            </div>
-          </div>
+          <nav className="site-head-right">
+            <ul className="nav" role="menu">
+              <li className="nav-services" role="menuitem">
+                <Link to={`/services`}>Services</Link>
+              </li>
+              <li className="nav-contact" role="menuitem">
+                <Link to={`/contact`}>Contact</Link>
+              </li>
+            </ul>
+          </nav>
         </div>
       </header>
       <main id="site-main" className="site-main">
@@ -80,13 +60,13 @@ const Layout = props => {
       <footer className="site-foot">
         &copy; {new Date().getFullYear()} <Link to={`/`}>{title}</Link> &mdash;
         Built with{" "}
-        <a
-          href="https://gatsbyjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+        <span
+          role="img"
+          aria-label="hand-waving"
+          style={{ fontSize: "1.5rem", marginRight: "15px" }}
         >
-          Gatsby
-        </a>
+          ❤️
+        </span>
       </footer>
     </div>
   )

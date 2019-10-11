@@ -16,17 +16,10 @@ const AboutPage = ({ data }, location) => {
       <SEO title="ABout" keywords={[`blog`, `gatsby`, `javascript`, `react`]} />
 
       <header className="page-head">
-        <h2 className="page-head-title">About Us Page</h2>
+        <h2 className="page-head-title">Services Page</h2>
       </header>
 
-      <div class="post-content-body">
-        <p>
-          I’m a veteran and a small business owner. I’m also a Maryland native.
-          I grew up in Baltimore County. I went to school at McDaniel College
-          and for the last 25 years I’ve been running marketing campaigns for
-          businesses - focusing on direct mail and non profit fundraising.
-        </p>
-      </div>
+      <div class="post-content-body">Here is the pages content</div>
     </Layout>
   )
 }
