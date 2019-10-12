@@ -21,6 +21,10 @@ production stylesheet in assets/built/screen.css using gulp dev
 @import "components/layout.css";
 @import "components/team-card.css";
 
+/* Page Imports
+/* ---------------------------------------------------------- */
+@import "pages/contact.css";
+
 /* Main - Theme styles
 /* ---------------------------------------------------------- */
 

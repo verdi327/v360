@@ -1,6 +1,7 @@
 import React from "react"
 import { graphql, StaticQuery } from "gatsby"
 import Img from "gatsby-image"
+import Calendly from "../components/calendly"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -13,19 +14,38 @@ const ContactPage = ({ data }, location) => {
 
   return (
     <Layout title={siteTitle}>
-      <SEO title="ABout" keywords={[`blog`, `gatsby`, `javascript`, `react`]} />
+      <SEO
+        title="Contact Us"
+        description="Book a call to learn more about our approach to personalized campaigning and how we can help your candidate earn more votes"
+      />
 
       <header className="page-head">
-        <h2 className="page-head-title">Contact Us Page</h2>
+        <h2 className="page-head-title">
+          We're a remote first team with our headquarters located in Baltimore,
+          MD
+        </h2>
       </header>
 
-      <div class="post-content-body">
-        <p>
-          I’m a veteran and a small business owner. I’m also a Maryland native.
-          I grew up in Baltimore County. I went to school at McDaniel College
-          and for the last 25 years I’ve been running marketing campaigns for
-          businesses - focusing on direct mail and non profit fundraising.
-        </p>
+      <div class="post-content-body contact-page">
+        <div className="row">
+          <div className="col-4">
+            <h4>Office</h4>
+            <p>6115 Falls Rd, Baltimore, MD 21209</p>
+            <h4>Phone</h4>
+            <p>(410) 561-8886</p>
+            <h4>Email</h4>
+            <p>hello@victory-360.com</p>
+          </div>
+          <div className="col-8">
+            <h4>Ready to learn more?</h4>
+            <p>
+              The best way to learn more is to schedule a call directly with CEO
+              Michael DeMos
+            </p>
+
+            <Calendly />
+          </div>
+        </div>
       </div>
     </Layout>
   )
@@ -36,15 +56,6 @@ const indexQuery = graphql`
     site {
       siteMetadata {
         title
-      }
-    }
-    benchAccounting: file(
-      relativePath: { eq: "bench-accounting-49909-unsplash.jpg" }
-    ) {
-      childImageSharp {
-        fluid(maxWidth: 1360) {
-          ...GatsbyImageSharpFluid
-        }
       }
     }
   }

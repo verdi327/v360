@@ -6,5 +6,4 @@ module.exports = {
   url: "https://gatsby-london.netlify.com", // Domain of your site without prefix!
   prefix: "/",
   author: "Michael Verdi",
-  twitter: "verdi_michael",
 }

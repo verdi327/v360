@@ -16,8 +16,9 @@ const IndexPage = ({ data }, location) => {
   return (
     <Layout title={siteTitle}>
       <SEO
-        title="Home Page"
-        keywords={[`victory-360`, `Maryland`, `Democrats`, `digital marketing`]}
+        title="Home"
+        description="Victory360 creates personalized political marketing campaigns for democratic candidates in Maryland"
+        keywords={[`victory360`, `Maryland`, `Democrats`, `digital marketing`]}
       />
 
       <header className="page-head">
@@ -55,9 +56,8 @@ const IndexPage = ({ data }, location) => {
         </p>
 
         <p>
-          I’m no politician and I’m not well versed in politics, but what I do
-          know is marketing. I know that to connect with someone, you actually
-          need to know something about them.
+          I’m no politician but what I do know is marketing. I know that to
+          connect with someone, you actually need to know something about them.
         </p>
 
         <blockquote>
@@ -66,11 +66,11 @@ const IndexPage = ({ data }, location) => {
         </blockquote>
 
         <p>
-          What I'm saying isn’t news to you. You know this, but up until now,
-          you didn’t know it possible to connect with your constituents in a
-          personalized way that is both cost effective and scalable. Leading
-          brands tailor their marketing based off hundreds of data points on a
-          given individual, political campaigns should be doing the same.
+          You know this, but up until now, you didn’t know it possible to
+          connect with your constituents in a personalized way that is both cost
+          effective and scalable. Leading brands tailor their marketing based
+          off hundreds of data points on a given individual, political campaigns
+          should be doing the same.
         </p>
 
         <p>
