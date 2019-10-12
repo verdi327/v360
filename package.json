@@ -1,12 +1,15 @@
 {
-  "name": "gatsby-london",
+  "name": "victory360",
   "private": true,
-  "description": "A custom, image-centric theme for Gatsby",
+  "description": "marketing site for victory360",
   "version": "1.0.0",
-  "author": "Imed Adel <aadelimed@gmail.com>",
-  "bugs": {
-    "url": "https://github.com/ImedAdel/gatsby-london/issues"
-  },
+  "author": "Michael Verdi",
+  "browserslist": [
+    "last 1 version",
+    "> 1%",
+    "maintained node versions",
+    "not dead"
+  ],
   "dependencies": {
     "@u-wave/react-vimeo": "^0.8.1",
     "gatsby": "^2.4.2",
@@ -53,18 +56,11 @@
   },
   "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
   "keywords": [
+    "victory360",
     "gatsby",
-    "ghost",
-    "gallery",
-    "blog",
-    "starter"
+    "marketing"
   ],
   "license": "MIT",
-  "main": "n/a",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ImedAdel/gatsby-london.git"
-  },
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
