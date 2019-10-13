@@ -18,14 +18,14 @@ const Layout = props => {
               className="hamburger hamburger--collapse"
               aria-label="Menu"
               role="button"
-              aria-controls="navigation"
+              aria-role="navigation"
             >
               <div className="hamburger-box">
                 <div className="hamburger-inner" />
               </div>
             </div>
           </a>
-          <nav id="swup" className="site-head-left">
+          <nav className="site-head-left">
             <ul className="nav" role="menu">
               <li className="nav-about" role="menuitem">
                 <Link to={`/about`}>About</Link>
@@ -53,16 +53,14 @@ const Layout = props => {
         </div>
       </header>
       <main id="site-main" className="site-main">
-        <div id="swup" className="transition-fade">
-          {children}
-        </div>
+        <div className="transition-fade">{children}</div>
       </main>
       <footer className="site-foot">
         &copy; {new Date().getFullYear()} <Link to={`/`}>{title}</Link> &mdash;
         Built with{" "}
         <span
           role="img"
-          aria-label="hand-waving"
+          aria-label="heart"
           style={{ fontSize: "1.5rem", marginRight: "15px" }}
         >
           ❤️

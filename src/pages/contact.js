@@ -26,7 +26,7 @@ const ContactPage = ({ data }, location) => {
         </h2>
       </header>
 
-      <div class="post-content-body contact-page">
+      <div className="post-content-body contact-page">
         <div className="row">
           <div className="col-4">
             <h4>Office</h4>

@@ -25,7 +25,7 @@ const ServicesPage = ({ data }, location) => {
         </h2>
       </header>
 
-      <div class="post-content-body">
+      <div className="post-content-body">
         <div className="row">
           <div className="col-4">
             <h4>Strategy</h4>

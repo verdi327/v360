@@ -25,7 +25,7 @@ const AboutPage = ({ data }, location) => {
         </h2>
       </header>
 
-      <div class="post-content-body">
+      <div className="post-content-body">
         <h4>The Goal</h4>
         <p>
           As a campaign manager it is your job to ensure your candidate gets
