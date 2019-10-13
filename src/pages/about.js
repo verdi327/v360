@@ -45,7 +45,7 @@ const AboutPage = ({ data }, location) => {
 
         <p>
           The problem with the above scenario is that you are guessing what is
-          important to each voter. By sending a baragge of talking points, you
+          important to each voter. By sending a barrage of talking points, you
           create too much noise while wasting valuable campaign dollars. In an
           ideal world, you would tailor your messaging to only the topics that
           are important to each voter like crime, education, traffic, tax reform
@@ -57,7 +57,7 @@ const AboutPage = ({ data }, location) => {
           Use the latest technology in big data analysis to create unqiue voter
           profiles from hundreds of data points. By knowing what is important to
           each voter, you can create highly personalized marketing campaigns
-          that reach the voter on the channels they are most likely to frequent
+          that reach the voter on the channels they are most likely to frequent.
         </p>
 
         <p>
