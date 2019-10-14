@@ -1,9 +1,10 @@
 import React from "react"
+import Img from "gatsby-image"
 
 const TeamCard = props => (
   <div className="card">
     <div className="card-header">
-      <img src="https://picsum.photos/200" />
+      <Img fixed={props.img} />
       <h4>{props.name}</h4>
       <h4>{props.title}</h4>
     </div>
@@ -14,3 +15,23 @@ const TeamCard = props => (
 )
 
 export default TeamCard
+
+// const bioQuery = graphql`
+//   query BioQuery {
+//     avatar: file(absolutePath: { regex: "/profile-pic.jpg/" }) {
+//       childImageSharp {
+//         fixed(width: 50, height: 50) {
+//           ...GatsbyImageSharpFixed
+//         }
+//       }
+//     }
+//     site {
+//       siteMetadata {
+//         author
+//         social {
+//           twitter
+//         }
+//       }
+//     }
+//   }
+// `

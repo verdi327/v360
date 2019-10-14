@@ -128,8 +128,10 @@ const IndexQuery = graphql`
       }
     }
 
-    file(relativePath: { regex: "/mike-demos/" }) {
-      id
+    file(
+      relativeDirectory: { eq: "profile-photos" }
+      name: { regex: "/michael-demos/" }
+    ) {
       childImageSharp {
         fixed(width: 200, height: 200) {
           base64
