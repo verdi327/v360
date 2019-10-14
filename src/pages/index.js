@@ -1,12 +1,11 @@
 import React from "react"
 import { graphql, StaticQuery } from "gatsby"
 import Img from "gatsby-image"
+import Calendly from "../components/calendly"
+import Vimeo from "@u-wave/react-vimeo"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import PostCard from "../components/postCard"
-import Calendly from "../components/calendly"
-import Vimeo from "@u-wave/react-vimeo"
 
 import "../utils/normalize.css"
 import "../utils/css/screen.css"
@@ -22,75 +21,48 @@ const IndexPage = ({ data }, location) => {
       />
 
       <header className="page-head">
-        <Img
-          style={{ marginBottom: "10px", borderRadius: "50%" }}
-          fixed={data.file.childImageSharp.fixed}
-        />
         <h2 className="page-head-title">
-          <span
-            role="img"
-            aria-label="hand-waving"
-            style={{ fontSize: "4rem", marginRight: "15px" }}
-          >
-            👋
-          </span>
-          I'm Michael DeMos
+          We're a full service marketing agency that uses data to personalize
+          political campaigns
         </h2>
       </header>
 
       <div className="post-content-body">
+        <h3>The Goal</h3>
         <p>
-          I’m a veteran and a small business owner. I’m also a Maryland native.
-          I grew up in Baltimore County. I went to school at McDaniel College
-          and for the last 25 years I’ve been running marketing campaigns for
-          businesses - focusing on direct mail and non profit fundraising.
+          As a campaign manager it is your job to ensure your candidate gets
+          elected. While there are many components that go into a successful
+          campaign, you know that executing a well thought out marketing plan is
+          a top priority.
         </p>
 
-        <p>I like it here.</p>
-
+        <h3>The Problem</h3>
         <p>
-          I like my neighbors, my employees and the clients I get to work with.
-          But, like most Marylanders, I think we can do better. While I believe
-          each individual should be the change they wish to see, I think some
-          problems have to be addressed at the political level.
-        </p>
-
-        <p>
-          I’m no politician but what I do know is marketing. I know that to
-          connect with someone, you actually need to know something about them.
-        </p>
-
-        <blockquote>
-          Marketing campaigns fail when companies sound too generic; trying to
-          be everything to everyone. To a consumer, it seems inauthenticate.
-        </blockquote>
-
-        <p>
-          You know this, but up until now, you didn’t know it possible to
-          connect with your constituents in a personalized way that is both cost
-          effective and scalable. Leading brands tailor their marketing based
-          off hundreds of data points on a given individual, political campaigns
-          should be doing the same.
+          Your campaign is limited in both time and funds. You need the highest
+          return on your investment but your not exactly sure what topics are
+          important to each voter. So, you create a campaign that touches on all
+          of your candidate's talking points, hoping that at least one resonates
+          with your voter.
         </p>
 
         <p>
-          Unfortunately, many are not and we’re still stuck in the age of the
-          one-size-fits-all, spray and pray campaigns that hope if you can just
-          get your name in front of someone enough times they might remember you
-          at the polls.
+          The problem with the above scenario is that you are guessing what is
+          important to each voter. By sending a barrage of talking points, you
+          create too much noise while wasting valuable campaign dollars. In an
+          ideal world, you would tailor your messaging to only the topics that
+          are important to each voter like crime, education, traffic, tax reform
+          etc...
         </p>
 
+        <h3>The Solution</h3>
         <p>
-          I know we can do better and I started Victory360 specifically to help
-          the right candidate win.
+          Use the latest technology in big data analysis to create unqiue voter
+          profiles from hundreds of data points. By knowing what is important to
+          each voter, you can create highly personalized marketing campaigns
+          that reach the voter on the channels they are most likely to frequent.
         </p>
 
-        <blockquote>
-          We focus on connection by using hundreds of data points to target
-          constituents through personalized print and digital campaigns.
-        </blockquote>
-
-        <h3>Interested?</h3>
+        <h4>Our Approach</h4>
         <p>The video below outlines are approach in more detail.</p>
 
         <Vimeo video="365230864" responsive />
@@ -105,7 +77,7 @@ const IndexPage = ({ data }, location) => {
           budgets.
         </p>
 
-        <h3>Let's Meet</h3>
+        <h3>Let's Connect</h3>
 
         <p>
           If you’re ready to connect with your constituents in ways that matter
@@ -125,26 +97,6 @@ const IndexQuery = graphql`
       siteMetadata {
         title
         description
-      }
-    }
-
-    file(
-      relativeDirectory: { eq: "profile-photos" }
-      name: { regex: "/michael-demos/" }
-    ) {
-      childImageSharp {
-        fixed(width: 200, height: 200) {
-          base64
-          tracedSVG
-          aspectRatio
-          width
-          height
-          src
-          srcSet
-          srcWebp
-          srcSetWebp
-          originalName
-        }
       }
     }
   }

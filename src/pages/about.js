@@ -1,6 +1,8 @@
 import React from "react"
 import { graphql, StaticQuery } from "gatsby"
 import Img from "gatsby-image"
+import Calendly from "../components/calendly"
+import Vimeo from "@u-wave/react-vimeo"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -19,52 +21,98 @@ const AboutPage = ({ data }, location) => {
       />
 
       <header className="page-head">
+        <Img
+          style={{ marginBottom: "10px", borderRadius: "50%" }}
+          fixed={data.file.childImageSharp.fixed}
+        />
         <h2 className="page-head-title">
-          We're a full service marketing agency that uses data to personalize
-          political campaigns
+          <span
+            role="img"
+            aria-label="hand-waving"
+            style={{ fontSize: "4rem", marginRight: "15px" }}
+          >
+            👋
+          </span>
+          I'm Michael DeMos
         </h2>
       </header>
 
       <div className="post-content-body">
-        <h4>The Goal</h4>
         <p>
-          As a campaign manager it is your job to ensure your candidate gets
-          elected. While there are many components that go into a successful
-          campaign, you know that executing a well thought out marketing plan is
-          a top priority.
+          I’m a veteran and a small business owner. I’m also a Maryland native.
+          I grew up in Baltimore County. I went to school at McDaniel College
+          and for the last 25 years I’ve been running marketing campaigns for
+          businesses - focusing on direct mail and non profit fundraising.
         </p>
 
-        <h4>The Problem</h4>
-        <p>
-          Your campaign is limited in both time and funds. You need the highest
-          return on your investment but your not exactly sure what topics are
-          important to each voter. So, you create a campaign that touches on all
-          of your candidate's talking points, hoping that at least one resonates
-          with your voter.
-        </p>
+        <p>I like it here.</p>
 
         <p>
-          The problem with the above scenario is that you are guessing what is
-          important to each voter. By sending a barrage of talking points, you
-          create too much noise while wasting valuable campaign dollars. In an
-          ideal world, you would tailor your messaging to only the topics that
-          are important to each voter like crime, education, traffic, tax reform
-          etc...
-        </p>
-
-        <h4>The Solution</h4>
-        <p>
-          Use the latest technology in big data analysis to create unqiue voter
-          profiles from hundreds of data points. By knowing what is important to
-          each voter, you can create highly personalized marketing campaigns
-          that reach the voter on the channels they are most likely to frequent.
+          I like my neighbors, my employees and the clients I get to work with.
+          But, like most Marylanders, I think we can do better. While I believe
+          each individual should be the change they wish to see, I think some
+          problems have to be addressed at the political level.
         </p>
 
         <p>
-          The margin of victory in today's races is too small to rely on
-          one-size-fits-all marketing campaigns. Upgrade your marketing hammer
-          to a scapel and start winning more elections today.
+          I’m no politician but what I do know is marketing. I know that to
+          connect with someone, you actually need to know something about them.
         </p>
+
+        <blockquote>
+          Marketing campaigns fail when companies sound too generic; trying to
+          be everything to everyone. To a consumer, it seems inauthenticate.
+        </blockquote>
+
+        <p>
+          You know this, but up until now, you didn’t know it possible to
+          connect with your constituents in a personalized way that is both cost
+          effective and scalable. Leading brands tailor their marketing based
+          off hundreds of data points on a given individual, political campaigns
+          should be doing the same.
+        </p>
+
+        <p>
+          Unfortunately, many are not and we’re still stuck in the age of the
+          one-size-fits-all, spray and pray campaigns that hope if you can just
+          get your name in front of someone enough times they might remember you
+          at the polls.
+        </p>
+
+        <p>
+          I know we can do better and I started Victory360 specifically to help
+          the right candidate win.
+        </p>
+
+        <blockquote>
+          We focus on connection by using hundreds of data points to target
+          constituents through personalized print and digital campaigns.
+        </blockquote>
+
+        <h3>Interested?</h3>
+        <p>The video below outlines are approach in more detail.</p>
+
+        <Vimeo video="365230864" responsive />
+
+        <h3>What’s the value of a single vote?</h3>
+
+        <p>
+          Consider the recent Democratic primary for Baltimore County Executive.
+          Johnny Olszewski won the bid by 17 votes, a margin of less than 0.1
+          percent. As races become closer, it will be candidates that are able
+          to connect with their voters that win, not those with the largest
+          budgets.
+        </p>
+
+        <h3>Let's Connect</h3>
+
+        <p>
+          If you’re ready to connect with your constituents in ways that matter
+          to them, then let’s talk. Use the following tool below to book time
+          directly on my calendar.
+        </p>
+
+        <Calendly />
       </div>
     </Layout>
   )
@@ -75,6 +123,26 @@ const indexQuery = graphql`
     site {
       siteMetadata {
         title
+      }
+    }
+
+    file(
+      relativeDirectory: { eq: "profile-photos" }
+      name: { regex: "/michael-demos/" }
+    ) {
+      childImageSharp {
+        fixed(width: 200, height: 200) {
+          base64
+          tracedSVG
+          aspectRatio
+          width
+          height
+          src
+          srcSet
+          srcWebp
+          srcSetWebp
+          originalName
+        }
       }
     }
   }
